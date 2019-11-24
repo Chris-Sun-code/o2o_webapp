@@ -1,6 +1,9 @@
-2019-11-13 13:56:05.831 [main] DEBUG c.h.o.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id = ? ORDER BY priority DESC 
-2019-11-13 13:56:05.861 [main] DEBUG c.h.o.d.P.queryProductCategoryList - ==> Parameters: 1(Long)
-2019-11-13 13:56:05.875 [main] DEBUG c.h.o.d.P.queryProductCategoryList - <==      Total: 0
-2019-11-13 13:57:35.578 [main] DEBUG c.h.o.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id = ? ORDER BY priority DESC 
-2019-11-13 13:57:35.612 [main] DEBUG c.h.o.d.P.queryProductCategoryList - ==> Parameters: 29(Long)
-2019-11-13 13:57:35.629 [main] DEBUG c.h.o.d.P.queryProductCategoryList - <==      Total: 3
+2019-11-24 13:33:35.200 [main] DEBUG com.haonan.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(product_name,product_desc,img_addr, normal_price,promotion_price,priority,create_time, last_edit_time,enable_status,product_category_id, shop_id) VALUES (?,?,?, ?,?,?,?, ?,?,?, ?) 
+2019-11-24 13:33:35.297 [main] DEBUG com.haonan.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试1(String), 测试Desc1(String), test1(String), null, null, 1(Integer), 2019-11-24 13:33:34.815(Timestamp), 2019-11-24 13:33:34.815(Timestamp), 1(Integer), 1(Long), 1(Long)
+2019-11-24 13:33:35.304 [main] DEBUG com.haonan.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2019-11-24 13:33:35.312 [main] DEBUG com.haonan.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(product_name,product_desc,img_addr, normal_price,promotion_price,priority,create_time, last_edit_time,enable_status,product_category_id, shop_id) VALUES (?,?,?, ?,?,?,?, ?,?,?, ?) 
+2019-11-24 13:33:35.313 [main] DEBUG com.haonan.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试2(String), 测试Desc2(String), test2(String), null, null, 2(Integer), 2019-11-24 13:33:34.815(Timestamp), 2019-11-24 13:33:34.815(Timestamp), 0(Integer), 1(Long), 1(Long)
+2019-11-24 13:33:35.316 [main] DEBUG com.haonan.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2019-11-24 13:33:35.316 [main] DEBUG com.haonan.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(product_name,product_desc,img_addr, normal_price,promotion_price,priority,create_time, last_edit_time,enable_status,product_category_id, shop_id) VALUES (?,?,?, ?,?,?,?, ?,?,?, ?) 
+2019-11-24 13:33:35.317 [main] DEBUG com.haonan.o2o.dao.ProductDao.insertProduct - ==> Parameters: test3(String), 测试Desc3(String), test3(String), null, null, 3(Integer), 2019-11-24 13:33:34.815(Timestamp), 2019-11-24 13:33:34.815(Timestamp), 1(Integer), 1(Long), 1(Long)
+2019-11-24 13:33:35.319 [main] DEBUG com.haonan.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
