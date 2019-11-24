@@ -1,0 +1,24 @@
+2019-11-11 15:31:16.054 [main] DEBUG com.haonan.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.owner_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+2019-11-11 15:31:16.090 [main] DEBUG com.haonan.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 1(Integer), 5(Integer)
+2019-11-11 15:31:16.111 [main] DEBUG com.haonan.o2o.dao.ShopDao.queryShopList - <==      Total: 5
+2019-11-11 15:31:16.119 [main] DEBUG com.haonan.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.owner_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+2019-11-11 15:31:16.120 [main] DEBUG com.haonan.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 1(Long)
+2019-11-11 15:31:16.121 [main] DEBUG com.haonan.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2019-11-11 15:31:16.123 [main] DEBUG com.haonan.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? and s.owner_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+2019-11-11 15:31:16.123 [main] DEBUG com.haonan.o2o.dao.ShopDao.queryShopList - ==> Parameters: 20(Long), 1(Long), 0(Integer), 2(Integer)
+2019-11-11 15:31:16.125 [main] DEBUG com.haonan.o2o.dao.ShopDao.queryShopList - <==      Total: 2
+2019-11-11 15:31:16.126 [main] DEBUG com.haonan.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? and s.owner_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+2019-11-11 15:31:16.126 [main] DEBUG com.haonan.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 20(Long), 1(Long)
+2019-11-11 15:31:16.127 [main] DEBUG com.haonan.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2019-11-11 15:40:30.950 [main] DEBUG com.haonan.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+2019-11-11 15:40:30.991 [main] DEBUG com.haonan.o2o.dao.ShopDao.queryShopList - ==> Parameters: 20(Long), 2(Integer), 2(Integer)
+2019-11-11 15:40:31.005 [main] DEBUG com.haonan.o2o.dao.ShopDao.queryShopList - <==      Total: 0
+2019-11-11 15:40:31.013 [main] DEBUG com.haonan.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+2019-11-11 15:40:31.013 [main] DEBUG com.haonan.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 20(Long)
+2019-11-11 15:40:31.015 [main] DEBUG com.haonan.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2019-11-11 15:41:04.953 [main] DEBUG com.haonan.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+2019-11-11 15:41:04.993 [main] DEBUG com.haonan.o2o.dao.ShopDao.queryShopList - ==> Parameters: 20(Long), 0(Integer), 2(Integer)
+2019-11-11 15:41:05.013 [main] DEBUG com.haonan.o2o.dao.ShopDao.queryShopList - <==      Total: 2
+2019-11-11 15:41:05.021 [main] DEBUG com.haonan.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
+2019-11-11 15:41:05.022 [main] DEBUG com.haonan.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 20(Long)
+2019-11-11 15:41:05.023 [main] DEBUG com.haonan.o2o.dao.ShopDao.queryShopCount - <==      Total: 1

@@ -1,0 +1,6 @@
+2019-11-13 13:56:05.831 [main] DEBUG c.h.o.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id = ? ORDER BY priority DESC 
+2019-11-13 13:56:05.861 [main] DEBUG c.h.o.d.P.queryProductCategoryList - ==> Parameters: 1(Long)
+2019-11-13 13:56:05.875 [main] DEBUG c.h.o.d.P.queryProductCategoryList - <==      Total: 0
+2019-11-13 13:57:35.578 [main] DEBUG c.h.o.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id = ? ORDER BY priority DESC 
+2019-11-13 13:57:35.612 [main] DEBUG c.h.o.d.P.queryProductCategoryList - ==> Parameters: 29(Long)
+2019-11-13 13:57:35.629 [main] DEBUG c.h.o.d.P.queryProductCategoryList - <==      Total: 3

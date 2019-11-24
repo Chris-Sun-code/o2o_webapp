@@ -1,0 +1,12 @@
+2019-11-09 08:24:14.462 [main] DEBUG c.haonan.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category ORDER BY priority DESC 
+2019-11-09 08:24:14.495 [main] DEBUG c.haonan.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2019-11-09 08:24:14.520 [main] DEBUG c.haonan.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 21
+2019-11-09 08:24:14.532 [main] DEBUG c.haonan.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id = ? ORDER BY priority DESC 
+2019-11-09 08:24:14.533 [main] DEBUG c.haonan.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 10(Long)
+2019-11-09 08:24:14.539 [main] DEBUG c.haonan.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 2
+2019-11-09 08:24:48.860 [main] DEBUG c.haonan.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category ORDER BY priority DESC 
+2019-11-09 08:24:48.901 [main] DEBUG c.haonan.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2019-11-09 08:24:48.925 [main] DEBUG c.haonan.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 21
+2019-11-09 08:24:48.935 [main] DEBUG c.haonan.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id = ? ORDER BY priority DESC 
+2019-11-09 08:24:48.936 [main] DEBUG c.haonan.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 10(Long)
+2019-11-09 08:24:48.937 [main] DEBUG c.haonan.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 2
