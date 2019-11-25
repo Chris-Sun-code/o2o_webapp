@@ -1,10 +1,10 @@
 package com.haonan.o2o.service;
 
+import com.haonan.o2o.dto.ImageHolder;
 import com.haonan.o2o.dto.ShopExecution;
 import com.haonan.o2o.entity.Shop;
 import com.haonan.o2o.exceptions.ShopOperationException;
 
-import java.io.InputStream;
 
 public interface ShopService {
 
@@ -32,11 +32,11 @@ public interface ShopService {
      * 更新店铺信息，包括对图片的处理
      *
      * @param shop
-     * @param fileName
+     * @param
      * @return
      * @throws ShopOperationException
      */
-    ShopExecution updateShop(Shop shop, InputStream shopImgInputStream, String fileName) throws ShopOperationException;
+    ShopExecution updateShop(Shop shop, ImageHolder thumbnail) throws ShopOperationException;
 
     /**
      * 添加商铺信息
@@ -44,6 +44,6 @@ public interface ShopService {
      * @throws ShopOperationException
      */
 
-    ShopExecution addShop(Shop shop, InputStream shopImgInputStream, String fileName) throws ShopOperationException;
+    ShopExecution addShop(Shop shop, ImageHolder thumbnail) throws ShopOperationException;
 
 }
