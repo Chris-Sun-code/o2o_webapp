@@ -1,6 +1,7 @@
 package com.haonan.o2o.service;
 
 import com.haonan.o2o.BaseTest;
+import com.haonan.o2o.dto.ImageHolder;
 import com.haonan.o2o.dto.ShopExecution;
 import com.haonan.o2o.entity.Area;
 import com.haonan.o2o.entity.PersonInfo;
@@ -47,7 +48,8 @@ public class ShopServiceTest extends BaseTest {
         shop.setShopName("修改后的店铺名称");
         File shopImg = new File("F:/beautifulgirl/yaya.jpg");
         InputStream is = new FileInputStream(shopImg);
-        ShopExecution shopExecution = shopService.updateShop(shop, is, "yaya.jpg");
+        ImageHolder imageHolder = new ImageHolder("yaya.jpg",is);
+        ShopExecution shopExecution = shopService.updateShop(shop, imageHolder);
         System.out.println("新的图片地址为：" + shopExecution.getShop().getShopImg());
     }
 
@@ -72,7 +74,8 @@ public class ShopServiceTest extends BaseTest {
         shop.setAdvice("审核中");
         File shopImg = new File("F:/beautifulgirl/tly.jpg");
         InputStream is = new FileInputStream(shopImg);
-        ShopExecution se = shopService.addShop(shop, is, shopImg.getName());
+        ImageHolder imageHolder = new ImageHolder(shopImg.getName(),is);
+        ShopExecution se = shopService.addShop(shop, imageHolder);
         assertEquals(ShopStateEnum.CHECK.getState(), se.getState());
     }
 }
