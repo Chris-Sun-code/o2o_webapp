@@ -1,6 +1,7 @@
 package com.haonan.o2o.controller.shopManagement;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.haonan.o2o.dto.ImageHolder;
 import com.haonan.o2o.dto.ShopExecution;
 import com.haonan.o2o.entity.Area;
 import com.haonan.o2o.entity.PersonInfo;
@@ -173,10 +174,10 @@ public class ShopManagementController {
         if(shop != null && shopImg!=null) {
             PersonInfo owner = (PersonInfo) request.getSession().getAttribute("user");
             shop.setOwner(owner);
-
             ShopExecution se;
             try {
-                se = shopService.addShop(shop, shopImg.getInputStream(), shopImg.getOriginalFilename());
+                ImageHolder imageHolder = new ImageHolder(shopImg.getOriginalFilename(),shopImg.getInputStream());
+                se = shopService.addShop(shop, imageHolder);
                 if(se.getState() == ShopStateEnum.CHECK.getState()) {
                     modelMap.put("success", true);
                     //该用户可以操作的用户列表
@@ -237,9 +238,10 @@ public class ShopManagementController {
             ShopExecution se;
             try {
                 if(shopImg == null){
-                    se = shopService.updateShop(shop, null, null);
+                    se = shopService.updateShop(shop, null);
                 }else{
-                    se = shopService.updateShop(shop, shopImg.getInputStream(), shopImg.getOriginalFilename());
+                    ImageHolder imageHolder = new ImageHolder(shopImg.getOriginalFilename(),shopImg.getInputStream());
+                    se = shopService.updateShop(shop, imageHolder);
                 }
                 if(se.getState() == ShopStateEnum.SUCCESS.getState()){
                     modelMap.put("success",true);
