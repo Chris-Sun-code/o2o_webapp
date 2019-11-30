@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author:Chris
  * @date:2019/11/8
  * @description
+ * 解析路由并转发到相应的HTML中
+ *
  */
 @Controller
 @RequestMapping(value = "/shopAdmin", method = RequestMethod.GET )
@@ -32,5 +34,16 @@ public class ShopAdminController {
     public String productCategoryManage() {
         // 转发至商品类别管理页面
         return "shop/productCategoryManagement";
+    }
+
+    @RequestMapping(value = "/productOperation")
+    public String productOperation() {
+        // 转发至商品添加/编辑页面
+        return "shop/productOperation";
+    }
+
+    @RequestMapping(value = "/productManagement")
+    public String productManagement() {
+        return "shop/productManagement";
     }
 }
