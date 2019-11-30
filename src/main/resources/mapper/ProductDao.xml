@@ -128,11 +128,9 @@
 		LEFT JOIN
 		tb_product_img pm
 		ON
-		p.product_id =
-		pm.product_id
+		p.product_id = pm.product_id
 		WHERE
-		p.product_id =
-		#{productId}
+		p.product_id = #{productId}
 		ORDER BY
 		pm.priority DESC
 	</select>
@@ -169,21 +167,19 @@
 			</if>
 		</set>
 		WHERE product_id = #{productId}
-		AND shop_id=#{shop.shopId}
+		AND shop_id= #{shop.shopId}
 	</update>
 	<update id="updateProductCategoryToNull" parameterType="Long">
 		UPDATE
 		tb_product
 		SET
 		product_category_id = null
-		WHERE product_category_id =
-		#{productCategoryId}
+		WHERE product_category_id = #{productCategoryId}
 	</update>
 	<delete id="deleteProduct">
 		DELETE FROM
 		tb_product
 		WHERE
-		product_id = #{productId}
-		AND shop_id=#{shopId}
+		product_id = #{productId} AND shop_id= #{shopId}
 	</delete>
 </mapper>
