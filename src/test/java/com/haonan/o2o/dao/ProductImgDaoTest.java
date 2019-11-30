@@ -48,7 +48,7 @@ public class ProductImgDaoTest extends BaseTest {
 	}
 
 	@Test
-	public void testCDeleteProductImgByProductId() throws Exception {
+	public void testCDeleteProductImgByProductId() {
 		// 删除新增的两条商品详情图片记录
 		long productId = 1;
 		int effectedNum = productImgDao.deleteProductImgByProductId(productId);
