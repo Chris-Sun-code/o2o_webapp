@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-@RequestMapping("/shopAdmin")
+@RequestMapping("/shopManagement")
 public class ProductCategoryManagementController {
 	@Autowired
 	private ProductCategoryService productCategoryService;
