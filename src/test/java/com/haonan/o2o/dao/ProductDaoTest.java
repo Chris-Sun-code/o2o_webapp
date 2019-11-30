@@ -74,7 +74,6 @@ public class ProductDaoTest extends BaseTest {
 	}
 
 	@Test
-	@Ignore
 	public void testBQueryProductList() throws Exception {
 		Product productCondition = new Product();
 		// 分页查询，预期返回三条结果
@@ -126,12 +125,12 @@ public class ProductDaoTest extends BaseTest {
 		ProductCategory pc = new ProductCategory();
 		Shop shop = new Shop();
 		shop.setShopId(1L);
-		pc.setProductCategoryId(2L);
-		product.setProductId(1L);
+		pc.setProductCategoryId(1L);
+		product.setProductId(42L);
 		product.setShop(shop);
 		product.setProductName("第二个产品");
 		product.setProductCategory(pc);
-		// 修改productId为1的商品的名称
+		// 修改productId为42的商品的名称
 		// 以及商品类别并校验影响的行数是否为1
 		int effectedNum = productDao.updateProduct(product);
 		assertEquals(1, effectedNum);
